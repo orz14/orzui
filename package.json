@@ -1,6 +1,6 @@
 {
   "name": "@orz14/orzui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A customizable React UI component library - CLI based (BETA)",
   "bin": {
     "orzui": "cli/index.js"
