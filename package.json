@@ -28,7 +28,7 @@
     "build:lib": "vite build",
     "build": "npm run clean && npm run build:lib && npm run build:types",
     "prepublishOnly": "npm test",
-    "publish:package": "npm run clean && npm run build && npm pack --dry-run && npm version patch && npm publish --access public"
+    "publish:package": "npm run build && npm pack --dry-run && npm version patch && npm publish --access public"
   },
   "keywords": [
     "react",
