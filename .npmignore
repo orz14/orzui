@@ -1,0 +1,64 @@
+# Source files (we only publish cli/)
+src/
+test/
+tests/
+examples/
+docs/
+
+# Build configs
+tsconfig.json
+vite.config.ts
+vite.config.js
+tailwind.config.js
+postcss.config.js
+.prettierrc
+.prettierignore
+.eslintrc
+.eslintrc.js
+.eslintrc.json
+.eslintignore
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+*.log
+*.tgz
+node_modules/
+
+# Testing
+coverage/
+.nyc_output/
+jest.config.js
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+__tests__/
+__mocks__/
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Build artifacts that shouldn't be published
+dist/types/

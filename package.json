@@ -1,0 +1,82 @@
+{
+  "name": "@orz14/orzui",
+  "version": "1.0.8",
+  "description": "A customizable React UI component library - CLI based (BETA)",
+  "bin": {
+    "orzui": "cli/index.js"
+  },
+  "main": "cli/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/style.css"
+  },
+  "files": [
+    "cli/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node cli/index.js --help",
+    "clean": "rimraf dist",
+    "build:types": "tsc --project tsconfig.json",
+    "build:lib": "vite build",
+    "build": "npm run clean && npm run build:lib && npm run build:types",
+    "prepublishOnly": "npm test",
+    "publish:package": "npm run clean && npm run build && npm pack --dry-run && npm version patch && npm publish --access public"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "tailwindcss",
+    "typescript",
+    "cli",
+    "design-system"
+  ],
+  "author": "orz14",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.0",
+    "@types/prompts": "^2.4.9",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rimraf": "^6.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  },
+  "dependencies": {
+    "commander": "^9.5.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^5.4.1",
+    "prompts": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orz14/orzui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orz14/orzui/issues"
+  },
+  "homepage": "https://github.com/orz14/orzui#readme"
+}
